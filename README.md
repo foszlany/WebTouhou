@@ -6,4 +6,5 @@ Your goal is to survive until the end while also shooting enemies, as the more y
 ## How to play
 1. Clone the repository
 2. Start a live server for index.html
-3. Use the keyboard or the mouse to play, Keyboard is **heavily** recommended.
+3. Use the keyboard or the mouse to play.
+     - Keyboard is **heavily** recommended.
