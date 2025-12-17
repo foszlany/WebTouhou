@@ -5,8 +5,8 @@ This fan-made rendition of the original Project Touhou series contains 3 levels 
 Your goal is to survive until the end while also shooting enemies, as the more you kill, the more powerful you become.
 
 <p align="center">
-  <img src="https://i.ibb.co/NgszdDYQ/msedge-0l3vll-Lsr-C.png" alt="Standard gameplay" width="250"/>
-  <img src="https://i.ibb.co/S4qmZCfs/image.png" alt="Standard gameplay" width="250"/>
+  <img src="https://i.ibb.co/NgszdDYQ/msedge-0l3vll-Lsr-C.png" alt="Standard gameplay" width="250" hspace="10"/>
+  <img src="https://i.ibb.co/S4qmZCfs/image.png" alt="Standard gameplay" width="250" hspace="10"/>
 </p>
 
 ## How to play
