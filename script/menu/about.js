@@ -5,7 +5,6 @@ let about_bind3 = '<p class="about about_bind" id="about_bind3"><span class="abo
 let about_bind4 = '<p class="about about_bind" id="about_bind4"><span class="about_bind_highlight">Toggle Ability:</span> Q</p>';
 let about_bind4_hint = '<p class="about about_bind" id="about_bind4_hint">Use it to massively increase your damage output!</p>';
 let about_closure = '<p class="about" id="about_closure">Made by Radojcic Kilien</p>';
-let about_closure_neptun = '<p class="about" id="about_closure_neptun">WWOR2H</p>';
 let about_btn_back = '<p class="about menu_btn back_btn menu_btn_selected" id="about_btn_back">Back</p>';
 
 function init_about() {
@@ -19,7 +18,7 @@ function init_about() {
 
     // INITIALIZE ABOUT
     window_game.css('background', 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../media/img/bg_main.jpg")');
-    window_game.append(about_desc, about_bind1, about_bind2, about_bind3, about_bind4, about_bind4_hint, about_closure, about_closure_neptun, about_btn_back);
+    window_game.append(about_desc, about_bind1, about_bind2, about_bind3, about_bind4, about_bind4_hint, about_closure, about_btn_back);
 
     set_mouse_color('.about_mouse')
 
