@@ -1,0 +1,410 @@
+/* GENERIC */
+@font-face {
+    font-family: DFPPOP;
+    src: url(../media/font/DFPPOPCorn-W12.ttf);
+}
+
+* {
+    margin: 0;
+    font-size: 48px;
+    color: white;
+    text-shadow:
+            2px 2px 0 black,
+            -2px 2px 0 black,
+            2px -2px 0 black,
+            -2px -2px 0 black;
+    user-select: none;
+    font-family: DFPPOP, serif;
+}
+
+body {
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+/* UNIVERSAL */
+#game_window, #game_canvas {
+    position: relative;
+    width: 600px;
+    height: 900px;
+    text-align: center;
+    line-height: 200px;
+    border: 1px solid white;
+}
+
+.back_btn {
+    color: #9f9f9f !important;
+}
+
+.back_btn:active {
+    color: #6a6a6a !important;
+}
+
+/* TITLE */
+#entry_title {
+    font-size: 60px;
+}
+
+#entry_img {
+    width: 450px;
+    height: 450px;
+    animation: hover 2s infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes hover {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+#entry_hint {
+    margin-top: -50px;
+    font-size: 28px;
+    animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        color: #ff2727;
+        transform: scale(0.97) rotate(3deg);
+    }
+    50% {
+        color: #bc0505;
+        transform: scale(1.03) rotate(-3deg);
+    }
+    100% {
+        color: #ff2727;
+        transform: scale(0.97) rotate(3deg);
+    }
+}
+
+
+/* MENU */
+.menu_btn {
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.menu_btn:active {
+    color: #e1e1e1;
+    transition: 0.05s;
+}
+
+.menu_btn_selected {
+    background: radial-gradient(ellipse 66% 30% at center, rgba(255, 0, 0, 0.25) 22%, rgba(255, 81, 81, 0.05) 50%, rgba(255, 168, 168, 0) 70%);
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.1s;
+}
+
+
+/* LEADERBOARD */
+#leaderboard_table {
+    margin: 2.5% 2.5% 0 2.5%;
+    border: 1px solid #bdccdc;
+    width: 95%;
+    text-align: left;
+    border-collapse: collapse;
+    line-height: normal;
+}
+
+#leaderboard_table thead th {
+    padding: 14px;
+    text-align: center;
+    font-size: 24px;
+    color: #FFFFFF;
+    background: linear-gradient(to bottom, #ffaf00 0%, #aa5f03 77%, #933503 100%) !important;
+}
+
+#leaderboard_table td {
+    height: 16px;
+    padding: 8px;
+    text-align: center;
+}
+
+#leaderboard_table tbody td {
+    font-size: 17px;
+    padding: 15px;
+}
+
+#leaderboard_table tr:nth-child(even) {
+    background: linear-gradient(to bottom, #710001 0%, #a13838 50%, #710001 100%) !important;
+}
+
+#leaderboard_table tr:nth-child(odd) {
+    background: linear-gradient(to bottom, #710001 0%, #bf2a2a 50%, #710001 100%) !important;
+}
+
+#leaderboard_btn_reset {
+    font-size: 28px;
+    margin-top: -50px;
+}
+
+#leaderboard_reset_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#leaderboard_reset_popup {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    width: 80%;
+    height: 40%;
+    padding: 5%;
+    line-height: 1.15;
+    background: rgba(0, 0, 0, 0.92);
+    border: 2px solid black;
+    border-radius: 12px;
+}
+
+#leaderboard_btn_confirm {
+    color: #00FF00;
+}
+
+#leaderboard_btn_cancel {
+    color: #FF0000;
+}
+
+
+/* OPTIONS */
+#options_text_mouse_disclaimer {
+    font-size: 12px;
+    margin-top: -60px;
+    color: #ff7373;
+    text-shadow: 1px 1px 1px black;
+    line-height: normal;
+}
+
+#slider_container {
+    transform: translateY(-55px);
+    line-height: 0;
+}
+
+#slider {
+    width: 264px;
+    height: 20px;
+    appearance: none;
+    background: linear-gradient(90deg, rgba(211,211,211,1) 0%, rgba(255,255,255,1) 100%);
+    border-radius: 22px;
+    border: 1px solid gray;
+    outline: none;
+    cursor: pointer;
+}
+
+#slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 37px;
+    height: 37px;
+    background: #0059ff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.options_sound {
+    line-height: 2;
+}
+
+p.options_sound {
+    margin-top: 100px;
+}
+
+.options_sound_arrow {
+    margin: 0 12px;
+    cursor: pointer;
+}
+
+
+/* SELECTION */
+.scrollable {
+    animation: anim_scroll_background 10s linear infinite;
+}
+
+@keyframes anim_scroll_background {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -512px 0;
+    }
+}
+
+.selection_btn {
+    font-family: DFPPOP, serif;
+    line-height: 110px;
+    color: white;
+    text-shadow:
+            2px 2px 0 black,
+            -2px 2px 0 black,
+            2px -2px 0 black,
+            -2px -2px 0 black;
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+#selection_card {
+    box-sizing: border-box;
+    position: absolute;
+    width: 90%;
+    height: 320px;
+    padding: 24px;
+    line-height: 1.2;
+    font-size: 24px;
+    margin: 0 5% 3% 5%;
+    bottom: 0;
+    border: 2px solid white;
+    border-radius: 22px;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+}
+
+.selection_card_glow {
+    border: 40px solid white;
+}
+
+#selection_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 91%;
+}
+
+#selection_btn_easy {
+    margin-top: 50px;
+    color: #03c0ff;
+}
+
+#selection_btn_normal {
+    color: #00ff48;
+}
+
+#selection_btn_hard {
+    color: #ff8000;
+}
+
+#selection_btn_lunatic {
+    color: #7b00ff;
+}
+
+#selection_btn_start {
+    color: red;
+}
+
+
+/* ABOUT */
+.about {
+    line-height: 2;
+}
+
+#about_desc {
+    margin: 55px 0;
+    font-size: 32px;
+}
+
+.about_bind {
+    font-size: 24px;
+}
+
+.about_bind_highlight, .about_bind_highlight + span {
+    font-size: 27px;
+    font-weight: bold;
+    color: #b7bedd;
+}
+
+#about_bind4_hint {
+    margin-top: -15px;
+    font-size: 16px;
+    color: lightgray;
+}
+
+#about_closure {
+    font-size: 32px;
+    margin-top: 100px;
+    color: #ffffff !important;
+    text-shadow: 2px 1px 1px #00f3ff, 2px 1px 3px #00f3ff, 2px 1px 8px #00f3ff;
+    animation: pulse 3s infinite;
+}
+
+#about_closure_neptun {
+    font-size: 18px;
+    margin: -20px -250px 100px 0;
+    color: #ffffff !important;
+    text-shadow: 2px 1px 1px #6600ff, 2px 1px 2px #6600ff, 2px 1px 6px #6600ff;
+    animation: pulse 3s infinite;
+}
+
+
+/* GAME OVER */
+#game_over_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#game_over_popup {
+    position: absolute;
+    top: 16%;
+    left: 5%;
+    width: 80%;
+    height: 66%;
+    padding: 5%;
+    line-height: 1.15;
+    background: rgba(0, 0, 0, 0.86);
+    border: 2px solid red;
+    border-radius: 12px;
+}
+
+#game_over_text_gameover {
+    font-size: 72px;
+    margin-bottom: 36px;
+    color: red;
+}
+
+#game_over_text_clear {
+    font-size: 72px;
+    margin-bottom: 36px;
+    color: cyan;
+}
+
+.game_over_highlight {
+    text-shadow: 1px 1px 6px white;
+}
+
+#game_over_placing {
+    margin: 24px 0;
+}
+
+#game_over_btn_leaderboard {
+    margin: 66px 0;
+}
+
+#game_over_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    margin-bottom: 25px;
+    bottom: 0;
+    width: 89%;
+}
